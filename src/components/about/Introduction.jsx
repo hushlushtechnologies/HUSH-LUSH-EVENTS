@@ -61,7 +61,7 @@ export default function IntroductionSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#111] text-white py-28 relative overflow-hidden"
+      className="bg-[#111] text-white py-10 relative overflow-hidden"
     >
       <div className="max-w-8xl mx-auto px-6 md:px-12 text-center">
         <h4

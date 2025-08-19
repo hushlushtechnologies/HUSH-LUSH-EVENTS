@@ -150,18 +150,18 @@ export default function ServicesSection() {
 
 
   return (
-  <section className="bg-[#111] text-white py-32 relative overflow-hidden">
+  <section className="bg-[#111] text-white py-10 relative overflow-hidden ">
   <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-    <h4 className="uppercase mb-6 tracking-[0.25em] text-base md:text-lg text-yellow-400">
+    <h4 className="uppercase mb-4 tracking-[0.25em] text-sm md:text-base text-gray-300 font-poppins">
       What we do
     </h4>
-    <h2 className="text-3xl md:text-5xl mb-20 font-light leading-snug max-w-5xl mx-auto font-playfair">
+    <h2 className="text-2xl md:text-4xl mb-5 font-light leading-snug max-w-4xl mx-auto font-playfair">
       From elegant weddings to high-impact corporate events and vibrant private celebrations,
       Hush Lush delivers seamless planning, stunning design, and unforgettable moments.
     </h2>
   </div>
 
-  <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-20 mt-10">
     {services.map((service, i) => (
       <div
         key={i}

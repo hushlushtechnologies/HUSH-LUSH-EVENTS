@@ -1,7 +1,7 @@
  import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,9 +84,9 @@ const NavBar = () => {
             >
               <div className="flex gap-3">
                 {[
-                  { href: "https://facebook.com", icon: <FaFacebookF /> },
-                  { href: "https://instagram.com", icon: <FaInstagram /> },
-                  { href: "https://twitter.com", icon: <FaTwitter /> },
+                  { href: "https://www.facebook.com/people/Hush-Lush-Events/61577939084079/", icon: <FaFacebookF /> },
+                  { href: "https://www.instagram.com/hushlushevents/", icon: <FaInstagram /> },
+                { href: "https://www.youtube.com/@HUSHLUSHEVENTS", icon: <FaYoutube /> },
                 ].map((item, index) => (
                   <a
                     key={index}

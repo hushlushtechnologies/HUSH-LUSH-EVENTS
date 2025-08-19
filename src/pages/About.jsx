@@ -8,7 +8,7 @@ import  AboutUsGallery from '../components/about/AboutGallery'
 export default function About() {
   return (
      <>
-     <PageGround name="ABOUT"/>
+     <PageGround name="About"/>
       <IntroductionSection/>
       <PhilosophySection />
        {/* <AboutUsGallery/> */}

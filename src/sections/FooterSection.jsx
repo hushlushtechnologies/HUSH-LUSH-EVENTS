@@ -22,14 +22,22 @@ const FooterSection = () => {
 
         <div className="flex-center gap-5 relative z-10 md:mt-20 mt-5">
           <div className="social-btn">
+            <a href="https://www.youtube.com/@HUSHLUSHEVENTS">
             <img src="./images/yt.svg" alt="YouTube" />
+            </a>
           </div>
           <div className="social-btn">
+            <a href="https://www.instagram.com/hushlushevents/">
             <img src="./images/insta.svg" alt="Instagram" />
+            </a>
           </div>
+          
           <div className="social-btn">
+            <a>
             <img src="./images/tiktok.svg" alt="TikTok" />
+            </a>
           </div>
+         
         </div>
 
         <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">

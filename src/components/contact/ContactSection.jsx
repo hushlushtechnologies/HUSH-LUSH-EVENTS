@@ -20,13 +20,13 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="bg-[#0f0f10] text-white min-h-screen">
+    <main className="bg-[#111] text-white min-h-screen">
       {/* Header */}
-      <section className="text-center py-16">
+      <section className="bg-[#111] text-white py-10 relative overflow-hidden text-center">
         {/* <h1 className="text-4xl md:text-6xl font-light">
           Contact <span className="text-yellow-300">Hush Lush</span>
         </h1> */}
-        <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+        <p className="text-2xl md:text-4xl mb-5 font-light leading-snug max-w-4xl mx-auto font-playfair">
           Share your vision—whether it’s a wedding, corporate gala, or private celebration—and we’ll make it unforgettable.
         </p>
       </section>
