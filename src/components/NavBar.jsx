@@ -85,7 +85,7 @@ const NavBar = () => {
               <div className="flex gap-3">
                 {[
                   { href: "https://www.facebook.com/people/Hush-Lush-Events/61577939084079/", icon: <FaFacebookF /> },
-                  { href: "https://www.instagram.com/hushlushevents/", icon: <FaInstagram /> },
+                  { href: "https://www.instagram.com/hushlush_events?igsh=MW8xMzVsdGl5aGZ4ag==", icon: <FaInstagram /> },
                 { href: "https://www.youtube.com/@HUSHLUSHEVENTS", icon: <FaYoutube /> },
                 ].map((item, index) => (
                   <a
