@@ -98,7 +98,7 @@ Dubai, UAE" />
         <div className="rounded-xl overflow-hidden shadow-lg">
           <iframe
             title="Hush Lush Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086600065327!2d-122.42067918468073!3d37.77492977975988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c7d4ef4df%3A0x9c45f5dc8bb1f4a5!2sEvent%20Venue!5e0!3m2!1sen!2sus!4v1683154103123!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.806660140149!2d55.3864222!3d25.344268000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b4ad1f84c95%3A0x905e1932b1c879a2!2sAfaq%20Alkhaleej%20Management%20Consultants!5e0!3m2!1sen!2sin!4v1755601131471!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ minHeight: "400px", border: 0 }}

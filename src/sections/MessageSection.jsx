@@ -68,7 +68,7 @@ const MessageSection = () => {
 
   return (
  <section className="message-content border-0">
-  <div className="container mx-auto flex-center py-28 relative">
+  <div className="container mx-auto flex-center py-10 mb:py-28 relative">
     <div className="w-full h-full">
       <div className="msg-wrapper">
         <h1 className="first-message">Celebrate love, joy, and</h1>
