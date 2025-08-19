@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
   }
 
  .message-content {
-  @apply bg-black text-[#ffd700] min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
+  @apply bg-black text-[#ffd700] lg:min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
 
   .msg-wrapper {
     @apply 2xl:text-[8.5rem] md:text-8xl text-5xl font-bold uppercase leading-[9vw] tracking-[-.35vw] flex flex-col justify-center items-center md:gap-24 gap-14;

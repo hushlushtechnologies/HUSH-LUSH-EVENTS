@@ -73,14 +73,15 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="copyright-box">
-          <p>Copyright © 2025 Hush Lush - All Rights Reserved</p>
+       
+      </div>
+       <div className="flex justify-around text-white    items-center py-10 ">
+          <p className=" ">Copyright © 2025 Hush Lush - All Rights Reserved</p>
           <div className="flex items-center gap-7">
             <p>Privacy Policy</p>
             <p>Terms of Service</p>
           </div>
         </div>
-      </div>
     </section>
   );
 };
