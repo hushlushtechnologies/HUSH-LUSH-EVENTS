@@ -5,8 +5,12 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // This will always reset to top
-    window.scrollTo(0, 0);
+    // Instantly jump to top (no smooth scroll animation)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant" // 👈 key part
+    });
   }, [pathname]);
 
   return null;

@@ -1,4 +1,4 @@
- import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -18,7 +18,6 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black text-white backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-2xl"
@@ -33,7 +32,9 @@ const NavBar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `transition-colors ${isActive ? "text-yellow-400" : "hover:text-indigo-400"}`
+                `transition-colors ${
+                  isActive ? "text-yellow-400" : "hover:text-indigo-400"
+                }`
               }
             >
               About Us
@@ -43,7 +44,9 @@ const NavBar = () => {
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                `transition-colors ${isActive ? "text-yellow-400" : "hover:text-indigo-400"}`
+                `transition-colors ${
+                  isActive ? "text-yellow-400" : "hover:text-indigo-400"
+                }`
               }
             >
               Services
@@ -68,7 +71,9 @@ const NavBar = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `transition-colors ${isActive ? "text-yellow-400" : "hover:text-indigo-400"}`
+                `transition-colors ${
+                  isActive ? "text-yellow-400" : "hover:text-indigo-400"
+                }`
               }
             >
               Contact
@@ -84,9 +89,18 @@ const NavBar = () => {
             >
               <div className="flex gap-3">
                 {[
-                  { href: "https://www.facebook.com/people/Hush-Lush-Events/61577939084079/", icon: <FaFacebookF /> },
-                  { href: "https://www.instagram.com/hushlush_events?igsh=MW8xMzVsdGl5aGZ4ag==", icon: <FaInstagram /> },
-                { href: "https://www.youtube.com/@HUSHLUSHEVENTS", icon: <FaYoutube /> },
+                  {
+                    href: "https://www.facebook.com/people/Hush-Lush-Events/61577939084079/",
+                    icon: <FaFacebookF />,
+                  },
+                  {
+                    href: "https://www.instagram.com/hushlush_events?igsh=MW8xMzVsdGl5aGZ4ag==",
+                    icon: <FaInstagram />,
+                  },
+                  {
+                    href: "https://www.youtube.com/@HUSHLUSHEVENTS",
+                    icon: <FaYoutube />,
+                  },
                 ].map((item, index) => (
                   <a
                     key={index}
@@ -107,9 +121,12 @@ const NavBar = () => {
                 showIcons ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
               }`}
             >
-              <span className="px-4 py-1 rounded-full bg-yellow-300 text-black font-semibold shadow-md hover:shadow-yellow-400 transition-all duration-300">
-                Call us: +97 1551084366
-              </span>
+              <a
+                href="tel:+971551084366"
+                className="px-4 py-1 rounded-full bg-yellow-300 text-black font-semibold shadow-md hover:shadow-yellow-400 transition-all duration-300"
+              >
+                Call us: +971 55 108 4366
+              </a>
             </div>
           </div>
         </ul>
@@ -127,7 +144,9 @@ const NavBar = () => {
                 to="/about"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `transition-colors ${isActive ? "text-yellow-400" : "hover:text-indigo-400"}`
+                  `transition-colors ${
+                    isActive ? "text-yellow-400" : "hover:text-indigo-400"
+                  }`
                 }
               >
                 About Us
@@ -138,7 +157,9 @@ const NavBar = () => {
                 to="/services"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `transition-colors ${isActive ? "text-yellow-400" : "hover:text-indigo-400"}`
+                  `transition-colors ${
+                    isActive ? "text-yellow-400" : "hover:text-indigo-400"
+                  }`
                 }
               >
                 Services
@@ -149,7 +170,9 @@ const NavBar = () => {
                 to="/contact"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `transition-colors ${isActive ? "text-yellow-400" : "hover:text-indigo-400"}`
+                  `transition-colors ${
+                    isActive ? "text-yellow-400" : "hover:text-indigo-400"
+                  }`
                 }
               >
                 Contact

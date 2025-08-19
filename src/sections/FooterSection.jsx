@@ -112,7 +112,7 @@ const FooterSection = () => {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex-center gap-5 relative z-10 md:mt-20 mt-5">
+        <div className="flex-center gap-5 relative z-10 md:mt-10 mt-5">
           <a
             href="https://www.youtube.com/@HUSHLUSHEVENTS"
             target="_blank"
@@ -140,7 +140,7 @@ const FooterSection = () => {
         </div>
 
         {/* Footer Content */}
-        <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
+        <div className="mt-20 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
           <div className="flex items-center md:gap-16 gap-5">
             <div className="text-lg font-bold">
               <p>Our Services</p>
@@ -175,7 +175,7 @@ const FooterSection = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="flex justify-around text-white items-center py-10">
+      <div className="flex justify-around text-white items-center pb-10">
         <p>Copyright © 2025 Hush Lush - All Rights Reserved</p>
         <div className="flex items-center gap-7">
           <p>Privacy Policy</p>
