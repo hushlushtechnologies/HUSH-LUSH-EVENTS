@@ -73,7 +73,9 @@ const App = () => {
                   <MessageSection />
                   <FlavorSection />
                   <BenefitSection />
+                  <div className="hidden lg:block">
                   <TestimonialSection />
+                  </div>
                  <FooterSection />
                 </>
               }
