@@ -13,9 +13,14 @@ import HeroSection from "./components/Homepage/Hero";
 import CustomCursor from "./components/CustomCursor";
 import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
-import Services from "./pages/Services";
+import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import Events from "./pages/Events";
+import Gallery from "./pages/Gallery";
+import Wedding from "./pages/Services/Wedding";
+import Coprateevents from "./pages/Services/Coprateevents";
+import Private from "./pages/Services/Private";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -35,26 +40,7 @@ const App = () => {
   });
 
   return (
-    // <main>
-    //   <CustomCursor/>
-    //   <NavBar />
-    //   <div id="smooth-wrapper">
-    //     <div id="smooth-content">
-    //       <HeroSection />
-       
-    //       <MessageSection />
-    //       <FlavorSection />
-    //       {/* <NutritionSection /> */}
-
-    //       <div>
-    //         <BenefitSection />
-    //         <TestimonialSection />
-    //       </div>
-
-    //       <FooterSection />
-    //     </div>
-    //   </div>
-    // </main>
+ 
 
      <main>
       <ScrollToTop/>
@@ -84,8 +70,13 @@ const App = () => {
             {/* Other Pages */}
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services/>} />
+            <Route path="/services/wedding" element={<Wedding />} />
+            <Route path="/services/corporate" element={<Coprateevents />} />
+            <Route path="/services/private-parties" element={<Private />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </div>
       </div>

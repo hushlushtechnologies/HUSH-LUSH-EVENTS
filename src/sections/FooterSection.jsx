@@ -31,13 +31,13 @@
 //             <img src="./images/insta.svg" alt="Instagram" />
 //             </a>
 //           </div>
-          
+
 //           {/* <div className="social-btn">
 //             <a>
 //             <img src="./images/tiktok.svg" alt="TikTok" />
 //             </a>
 //           </div> */}
-         
+
 //         </div>
 
 //         <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
@@ -73,7 +73,6 @@
 //           </div>
 //         </div>
 
-       
 //       </div>
 //        <div className="flex justify-around text-white    items-center py-10 ">
 //           <p className=" ">Copyright © 2025 Hush Lush - All Rights Reserved</p>
@@ -90,6 +89,7 @@
 
 import { useMediaQuery } from "react-responsive";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   const isMobile = useMediaQuery({
@@ -141,19 +141,53 @@ const FooterSection = () => {
 
         {/* Footer Content */}
         <div className="mt-20 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
-          <div className="flex items-center md:gap-16 gap-5">
-            <div className="text-lg font-bold">
-              <p>Our Services</p>
+          <div className="mt-20 md:px-10 px-5 flex flex-col md:flex-row justify-between text-milk font-paragraph md:text-lg font-medium gap-10">
+            {/* Left Section - Title */}
+            {/* <div className="flex flex-col md:items-start items-center">
+    <h3 className="text-2xl font-extrabold tracking-wide mb-3">Our Services</h3>
+    <p className="text-sm opacity-80 max-w-sm text-center md:text-left">
+      Crafting unforgettable experiences with creativity, precision, and elegance.
+    </p>
+  </div> */}
+
+            {/* Middle Links */}
+            <div className="flex flex-col gap-2 text-center md:text-left">
+              <h4 className="text-lg font-semibold mb-2 text-yellow-400">Our Services</h4>
+              <p className="hover:text-primary cursor-pointer">
+                Wedding Planning
+              </p>
+              <p className="hover:text-primary cursor-pointer">
+                Corporate Events
+              </p>
+              <p className="hover:text-primary cursor-pointer">
+                Private Parties
+              </p>
             </div>
-            <div>
-              <p>Wedding Planning</p>
-              <p>Corporate Events</p>
-              <p>Private Parties</p>
-            </div>
-            <div>
-              <p>About Us</p>
-              <p>Contact</p>
-              <p>Client Stories</p>
+
+            {/* Right Links */}
+            <div className="flex flex-col gap-2 text-center md:text-left">
+              <h4 className="text-lg font-semibold mb-2 text-yellow-400">Quick Links</h4>
+
+              <Link 
+                to="/about"
+                className="hover:text-primary cursor-pointer transition-colors"
+              >
+                About Us
+              </Link>
+
+              <Link
+                to="/services"
+                className="hover:text-primary cursor-pointer transition-colors"
+              >
+                Services
+              </Link>
+
+              <Link
+                to="/contact"
+                className="hover:text-primary cursor-pointer transition-colors"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
 

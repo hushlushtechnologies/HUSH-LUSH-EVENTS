@@ -23,6 +23,10 @@
   --font-paragraph: "ProximaNova, sans-serif";
 }
 
+.gold{
+  color: oklch(0.71 0.11 86.4);
+}
+
  
 
 html,

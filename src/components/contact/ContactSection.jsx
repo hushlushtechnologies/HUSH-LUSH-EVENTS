@@ -34,7 +34,7 @@ export default function ContactPage() {
       {/* Contact Info */}
       <section className="max-w-6xl mx-auto px-6 grid sm:grid-cols-3 gap-8 mb-16">
         <InfoCard icon={<FaEnvelope />} title="Email Us" text="info@hushlushevents.com" />
-        <InfoCard icon={<FaPhoneAlt />} title="Call Us" text="+97 1551084366" />
+        <InfoCard icon={<FaPhoneAlt />} title="Call Us" text="+971 542321282" />
         <InfoCard icon={<FaMapMarkerAlt />} title="Visit Us" text="crystal plaza Sharjah al majaz 1
 Dubai, UAE" />
       </section>
