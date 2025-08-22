@@ -45,7 +45,7 @@ const FlavorTitle = () => {
     <div className="general-title col-center h-full 2xl:gap-32 xl:gap-24 gap-16 ">
   {/* First part */}
   <div className="overflow-hidden 2xl:py-0 py-3 first-text-split  text-white">
-    <h1 className="text-yellow-500">Hush Lush</h1>
+    <h1 className="gold">Hush Lush</h1>
   </div>
 
   {/* Middle animated block */}
@@ -62,7 +62,7 @@ const FlavorTitle = () => {
 
   {/* Last part */}
   <div className="overflow-hidden 2xl:py-0 py-3 second-text-split">
-    <h1 className="text-yellow-500">Celebrations</h1>
+    <h1 className="gold">Celebrations</h1>
   </div>
 </div>
 

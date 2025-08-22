@@ -80,7 +80,7 @@ export default function HeroSection() {
         >
           <div className="flex flex-col lg:flex-row justify-center items-center gap-3">
             <h1
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg text-yellow-400 leading-snug"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg gold leading-snug"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Crafting Unforgettable Memories

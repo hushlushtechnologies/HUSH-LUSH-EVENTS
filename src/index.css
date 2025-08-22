@@ -40,7 +40,12 @@
 
 
 .gold{
-  color: oklch(0.71 0.11 86.4);
+color: #bfa24a;
+
+}
+.gold-bg{
+  background-color: #bfa24a;
+
 }
 
 /* .thin-font {

@@ -179,7 +179,7 @@ export default function ServicesSection() {
 
         {/* Text + Subcategories */}
         <div className="p-10">
-          <h3 className="font-cinzel text-3xl md:text-4xl font-semibold mb-6 text-yellow-300">
+          <h3 className="font-cinzel text-3xl md:text-4xl font-semibold mb-6 gold">
             {service.title}
           </h3>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10">
@@ -192,7 +192,7 @@ export default function ServicesSection() {
                 key={idx}
                 className="bg-gradient-to-br from-[#1f1f1f] to-[#2a2a2a] p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 hover:shadow-lg hover:shadow-yellow-400/20 transition"
               >
-                <h4 className="text-yellow-400 font-semibold text-lg mb-3">
+                <h4 className="gold font-semibold text-lg mb-3">
                   {category}
                 </h4>
                 <ul className="list-disc pl-5 text-gray-400 text-sm md:text-base space-y-2">

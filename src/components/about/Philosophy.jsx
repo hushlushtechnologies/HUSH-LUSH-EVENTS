@@ -55,7 +55,7 @@ const AboutPhilosophySection = () => {
   return (
    <section
   ref={sectionRef}
-  className="bg-[#1a1a1a] text-white min-h-screen flex items-center py-20  roboto-thin"
+  className="bg-[#1a1a1a] text-white min-h-screen flex items-center py-20   "
 >
   <div className="max-w-7xl mx-auto px-6 w-full">
     {/* Title */}
@@ -82,7 +82,7 @@ const AboutPhilosophySection = () => {
         ref={textRef}
         className="bg-white text-black p-8 leading-relaxed rounded-lg shadow-lg"
       >
-        <p className="mb-6 text-xl">
+        <p className="mb-6 text-xl roboto-thin">
           At <strong>Hush Lush</strong>, we believe every design tells a story —
           a reflection of passion, creativity, and the subtle details that make
           each piece truly unique. Our journey is about capturing emotions and

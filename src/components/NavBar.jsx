@@ -102,7 +102,7 @@ const NavBar = () => {
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-9 h-9 flex items-center justify-center rounded-full bg-yellow-300 text-black text-lg shadow-md hover:scale-110 transition-all duration-300"
+                    className="w-9 h-9 flex items-center justify-center rounded-full gold-bg text-black text-lg shadow-md hover:scale-110 transition-all duration-300"
                   >
                     {item.icon}
                   </a>
@@ -111,7 +111,7 @@ const NavBar = () => {
             </div>
             {/* Phone */}
             <div className={`absolute right-0 transition-all duration-700 ${showIcons ? "opacity-0 rotate-90" : "opacity-100"}`}>
-              <a href="tel:+971542321282" className="px-4 py-1 rounded-full bg-yellow-300 text-black font-semibold shadow-md hover:shadow-yellow-400">
+              <a href="tel:+971542321282" className="px-4 py-1 rounded-full gold-bg text-black font-semibold shadow-md hover:shadow-yellow-400">
                 Call us: +971 542321282
               </a>
             </div>

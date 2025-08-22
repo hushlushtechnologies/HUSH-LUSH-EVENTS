@@ -16,7 +16,7 @@ const MessageSection = () => {
     });
 
     gsap.to(firstMsgSplit.words, {
-      color: "#FACC15   ",
+      color: "#bfa24a",
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {
@@ -27,7 +27,7 @@ const MessageSection = () => {
       },
     });
     gsap.to(secMsgSplit.words, {
-      color: "#EAB308   ",
+      color: "#bfa24a",
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {

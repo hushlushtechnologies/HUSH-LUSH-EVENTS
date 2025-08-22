@@ -61,19 +61,19 @@ export default function IntroductionSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#111] text-white py-10 relative overflow-hidden roboto-thin"
+      className="bg-[#111] text-white py-10 relative overflow-hidden  "
     >
       <div className="max-w-8xl mx-auto px-6 md:px-12 text-center">
         <h4
           // ref={headingRef}
-          className="uppercase mb-4 tracking-[0.25em] text-sm md:text-base text-gray-300 roboto-thin"
+          className="uppercase mb-4 tracking-[0.25em] text-sm md:text-base text-gray-300 "
         >
           Introduction
         </h4>
 
         <h2
           // ref={subHeadingRef}
-          className="text-2xl md:text-4xl mb-5 font-light leading-snug max-w-4xl mx-auto   roboto-thin"
+          className="text-2xl md:text-4xl mb-5 font-light leading-snug max-w-4xl mx-auto    "
         >
           Hush Lush is your premier partner in crafting unforgettable experiences — 
           from dream weddings to seamless corporate events and intimate private celebrations.
@@ -90,7 +90,7 @@ export default function IntroductionSection() {
           </div>
         </div>
 
-        <p className="mt-12 text-sm md:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed   roboto-thin ">
+        <p className="mt-12 text-sm md:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed     ">
           At Hush Lush, we specialize in curating exceptional wedding experiences,
           flawlessly executed corporate functions, and stylish private parties. Our 
           team of creative planners, coordinators, and photographers are committed to 

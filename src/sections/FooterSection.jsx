@@ -30,7 +30,7 @@ const FooterSection = () => {
             href="https://www.youtube.com/@HUSHLUSHEVENTS"
             target="_blank"
             rel="noreferrer"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-yellow-300 text-black text-2xl shadow-md hover:scale-110 hover:shadow-yellow-400 transition-all duration-300"
+            className="w-12 h-12 flex items-center justify-center rounded-full gold-bg text-black text-2xl shadow-md hover:scale-110 hover:shadow-yellow-400 transition-all duration-300"
           >
             <FaYoutube />
           </a>
@@ -38,7 +38,7 @@ const FooterSection = () => {
             href="https://www.instagram.com/hushlush_events?igsh=MW8xMzVsdGl5aGZ4ag=="
             target="_blank"
             rel="noreferrer"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-yellow-300 text-black text-2xl shadow-md hover:scale-110 hover:shadow-yellow-400 transition-all duration-300"
+            className="w-12 h-12 flex items-center justify-center rounded-full gold-bg text-black text-2xl shadow-md hover:scale-110 hover:shadow-yellow-400 transition-all duration-300"
           >
             <FaInstagram />
           </a>
@@ -46,7 +46,7 @@ const FooterSection = () => {
             href="https://www.facebook.com/people/Hush-Lush-Events/61577939084079/"
             target="_blank"
             rel="noreferrer"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-yellow-300 text-black text-2xl shadow-md hover:scale-110 hover:shadow-yellow-400 transition-all duration-300"
+            className="w-12 h-12 flex items-center justify-center rounded-full gold-bg text-black text-2xl shadow-md hover:scale-110 hover:shadow-yellow-400 transition-all duration-300"
           >
             <FaFacebookF />
           </a>
@@ -65,7 +65,7 @@ const FooterSection = () => {
 
             {/* Middle Links */}
             <div className="flex flex-col gap-2 text-center md:text-left">
-              <h4 className="text-lg font-semibold mb-2 text-yellow-400">Our Services</h4>
+              <h4 className="text-lg font-semibold mb-2 gold">Our Services</h4>
               <p className="hover:text-primary cursor-pointer">
                 Wedding Planning
               </p>
@@ -79,7 +79,7 @@ const FooterSection = () => {
 
             {/* Right Links */}
             <div className="flex flex-col gap-2 text-center md:text-left">
-              <h4 className="text-lg font-semibold mb-2 text-yellow-400">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-2 gold">Quick Links</h4>
 
               <Link 
                 to="/about"
