@@ -152,10 +152,10 @@ export default function ServicesSection() {
   return (
   <section className="bg-[#111] text-white py-10 relative overflow-hidden ">
   <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-    <h4 className="uppercase mb-4 tracking-[0.25em] text-sm md:text-base text-gray-300 font-poppins">
+    <h4 className="uppercase mb-4 tracking-[0.25em] text-sm md:text-base text-gray-300  ">
       What we do
     </h4>
-    <h2 className="text-2xl md:text-4xl mb-5 font-light leading-snug max-w-4xl mx-auto font-playfair">
+    <h2 className="text-2xl md:text-4xl mb-5  t leading-snug max-w-4xl mx-auto  ">
       From elegant weddings to high-impact corporate events and vibrant private celebrations,
       Hush Lush delivers seamless planning, stunning design, and unforgettable moments.
     </h2>
@@ -182,7 +182,7 @@ export default function ServicesSection() {
           <h3 className="font-cinzel text-3xl md:text-4xl font-semibold mb-6 gold">
             {service.title}
           </h3>
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10">
+          <p className="text-lg md:text-xl text-white leading-relaxed mb-10">
             {service.description}
           </p>
 
@@ -195,7 +195,7 @@ export default function ServicesSection() {
                 <h4 className="gold font-semibold text-lg mb-3">
                   {category}
                 </h4>
-                <ul className="list-disc pl-5 text-gray-400 text-sm md:text-base space-y-2">
+                <ul className="list-disc pl-5 text-white text-sm md:text-base space-y-2">
                   {items.map((item, j) => (
                     <li key={j}>{item}</li>
                   ))}

@@ -73,7 +73,7 @@ export default function IntroductionSection() {
 
         <h2
           // ref={subHeadingRef}
-          className="text-2xl md:text-4xl mb-5 font-light leading-snug max-w-4xl mx-auto    "
+          className="text-2xl md:text-4xl mb-5   leading-snug max-w-4xl mx-auto    "
         >
           Hush Lush is your premier partner in crafting unforgettable experiences — 
           from dream weddings to seamless corporate events and intimate private celebrations.

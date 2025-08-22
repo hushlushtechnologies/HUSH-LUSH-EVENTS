@@ -61,7 +61,7 @@ const AboutPhilosophySection = () => {
     {/* Title */}
     <h2
       ref={titleRef}
-      className="text-4xl md:text-6xl font-bold border-b border-gray-600 pb-4 mb-12"
+      className="text-4xl md:text-6xl   border-b border-gray-600 pb-4 mb-12"
     >
       OUR STORY & PHILOSOPHY
     </h2>
@@ -82,7 +82,7 @@ const AboutPhilosophySection = () => {
         ref={textRef}
         className="bg-white text-black p-8 leading-relaxed rounded-lg shadow-lg"
       >
-        <p className="mb-6 text-xl roboto-thin">
+        <p className="mb-6   ">
           At <strong>Hush Lush</strong>, we believe every design tells a story —
           a reflection of passion, creativity, and the subtle details that make
           each piece truly unique. Our journey is about capturing emotions and

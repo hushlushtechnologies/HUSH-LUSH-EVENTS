@@ -67,7 +67,7 @@ const MessageSection = () => {
   });
 
   return (
- <section className="message-content  border-0  ">
+ <section className="message-content  border-0   ">
   <div className="container mx-auto flex-center py-10 mb:py-28 relative">
     <div className="w-full h-full">
       <div className="msg-wrapper">
@@ -77,14 +77,14 @@ const MessageSection = () => {
           style={{
             clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
           }}
-          className="msg-text-scroll"
+          className="msg-text-scroll "
         >
-          <div className="  md:pb-5 pb-5 px-5">
+          <div className="  md:pb-5 pb-5 px-5 gold  ">
             <h2 className=" ">Forever</h2>
           </div>
         </div>
 
-        <h1 className="second-message mt-10">
+        <h1 className="second-message  ">
           with unforgettable moments  
         </h1>
       </div>

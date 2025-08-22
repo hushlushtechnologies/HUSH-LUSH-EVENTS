@@ -38,12 +38,12 @@ const MotionCard = ({ section, idx }) => (
         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
       />
       <div className="absolute inset-0 bg-black/40 flex items-end p-4">
-        <h3 className="text-xl font-semibold text-white z-10">{section.title}</h3>
+        <h3 className="text-xl   text-white z-10">{section.title}</h3>
       </div>
     </div>
     <div className="p-8">
       <p className="text-gray-400 mb-6 text-sm">{section.description}</p>
-      <ul className="space-y-3 text-gray-300">
+      <ul className="space-y-3 text-white">
         {section.items.map((item, i) => (
           <li key={i} className="flex gap-3 items-start">
             <svg
@@ -58,7 +58,7 @@ const MotionCard = ({ section, idx }) => (
                 clipRule="evenodd"
               />
             </svg>
-            <span className="text-gray-300">{item}</span>
+            <span className="text-white">{item}</span>
           </li>
         ))}
       </ul>
@@ -119,7 +119,7 @@ export default function Private() {
           <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col items-center">
             <motion.h1
               variants={fadeUp}
-              className="text-white text-4xl md:text-6xl font-bold max-w-4xl leading-tight"
+              className="text-white text-4xl md:text-6xl   max-w-4xl leading-tight"
             >
               Private Events, Impeccably Tailored to Your Story
             </motion.h1>
@@ -146,7 +146,7 @@ export default function Private() {
           <h4 className="uppercase mb-4 tracking-[0.25em] text-sm md:text-base gold">
             Our Expertise
           </h4>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 leading-snug">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl   mb-16 leading-snug">
             Crafting Unforgettable Experiences, <br /> One Moment at a Time.
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -207,7 +207,7 @@ export default function Private() {
               >
                 <div className="flex justify-center md:justify-start">{feature.icon}</div>
                 <h3 className="text-2xl font-bold mb-2 gold">{feature.title}</h3>
-                <p className="text-gray-400">{feature.text}</p>
+                <p className="text-white">{feature.text}</p>
               </motion.div>
             ))}
           </div>

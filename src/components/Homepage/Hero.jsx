@@ -80,7 +80,7 @@ export default function HeroSection() {
         >
           <div className="flex flex-col lg:flex-row justify-center items-center gap-3">
             <h1
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg gold leading-snug"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl   drop-shadow-lg gold leading-snug  thin-text"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Crafting Unforgettable Memories
@@ -94,8 +94,8 @@ export default function HeroSection() {
             />
           </div>
 
-          <p
-            className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl drop-shadow-md text-[var(--foreground)] leading-relaxed"
+          <p 
+            className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl drop-shadow-md text-[var(--foreground)] leading-relaxed thin-text"
             style={{ fontFamily: "var(--font-poppins)" }}
           >
             Luxury Weddings & Event Management by Hush Lush
@@ -108,6 +108,9 @@ export default function HeroSection() {
           </span>
         </div>
       </div>
+
+ 
+
     </section>
   );
 }
