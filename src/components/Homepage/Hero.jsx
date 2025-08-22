@@ -50,7 +50,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-black border-0">
+    <section ref={sectionRef} className="relative bg-black border-0  ">
       <div className="sticky top-0 h-screen flex justify-center items-center overflow-hidden">
         {/* Background Video */}
         <video

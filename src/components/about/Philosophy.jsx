@@ -55,7 +55,7 @@ const AboutPhilosophySection = () => {
   return (
    <section
   ref={sectionRef}
-  className="bg-[#1a1a1a] text-white min-h-screen flex items-center py-20"
+  className="bg-[#1a1a1a] text-white min-h-screen flex items-center py-20  roboto-thin"
 >
   <div className="max-w-7xl mx-auto px-6 w-full">
     {/* Title */}

@@ -170,6 +170,7 @@ export default function Wedding() {
             "Beach & Outdoor",
             "Luxury Weddings",
             "Intimate / Micro Weddings",
+           " Themed Weddings"
           ].map((type, i) => (
             <motion.div
               key={i}

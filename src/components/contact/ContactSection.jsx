@@ -110,11 +110,12 @@ Dubai, UAE" />
     </main>
   );
 }
-
-function InfoCard({ icon, title, text }) {
+ function InfoCard({ icon, title, text }) {
   return (
     <div className="bg-[#1a1a1a] p-6 rounded-xl text-center shadow-lg">
-      <div className="text-yellow-300 text-3xl mb-3">{icon}</div>
+      <div className="text-yellow-300 text-3xl mb-3 mx-auto w-fit">
+        {icon}
+      </div>
       <h3 className="font-semibold text-lg">{title}</h3>
       <p className="text-gray-400 mt-1">{text}</p>
     </div>

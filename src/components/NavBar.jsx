@@ -32,7 +32,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black text-white backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black text-white backdrop-blur-md shadow-sm  ">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Mobile Toggle */}
         <button className="md:hidden text-2xl" onClick={() => setIsOpen(!isOpen)}>
@@ -53,7 +53,7 @@ const NavBar = () => {
                   {link.label}
                 </NavLink>
                 {dropdownOpen && (
-                  <ul className="absolute top-6 left-0 bg-black text-white shadow-lg rounded-md w-48 py-2 z-50">
+                  <ul className="absolute top-6 left-0 bg-black text-white shadow-lg rounded-md w-48 py-2 z-50 ">
                     {link.dropdown.map((sublink) => (
                       <li key={sublink.label}>
                         <NavLink to={sublink.to} className="block px-4 py-2 hover:bg-yellow-400 hover:text-black">

@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+
 
 @font-face {
   font-family: "ProximaNova, sans-serif";
@@ -19,13 +23,37 @@
   --color-milk-yellow: #e3d3bc;
   --color-red: #a02128;
   --color-milk: #faeade;
-  --font-sans: "Antonio", sans-serif;
+  /* --font-sans: "Antonio", sans-serif;
   --font-paragraph: "ProximaNova, sans-serif";
+   */
+
+     /* Fonts */
+ --font-sans: "Antonio", sans-serif;
+  --font-paragraph: "Roboto", sans-serif;
 }
+
+
+.roboto-thin {
+  font-family: var(--font-paragraph);
+  font-weight: 100; /* Roboto Thin */
+}
+
 
 .gold{
   color: oklch(0.71 0.11 86.4);
 }
+
+/* .thin-font {
+  font-family: var(--font-paragraph);
+  font-weight: 100;  
+} */
+
+.thin-font {
+  font-family: var(--font-paragraph);
+  font-weight: 100; /* Thin */
+}
+
+
 
  
 
@@ -100,7 +128,7 @@ body::-webkit-scrollbar {
   }
 
  .message-content {
-  @apply bg-black text-[#ffd700] lg:min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
+  @apply bg-black text-[#ffd700] lg:min-h-dvh overflow-hidden  flex justify-center items-center relative z-20;
 
   .msg-wrapper {
     @apply 2xl:text-[8.5rem] md:text-8xl text-5xl font-bold uppercase leading-[9vw] tracking-[-.35vw] flex flex-col justify-center items-center md:gap-24 gap-14;

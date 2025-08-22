@@ -21,6 +21,7 @@ import Gallery from "./pages/Gallery";
 import Wedding from "./pages/Services/Wedding";
 import Coprateevents from "./pages/Services/Coprateevents";
 import Private from "./pages/Services/Private";
+import ScrollToTopButton from "./components/ScrollToTopBtn";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -46,6 +47,7 @@ const App = () => {
       <ScrollToTop/>
       <CustomCursor />
       <NavBar />
+       <ScrollToTopButton />
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
