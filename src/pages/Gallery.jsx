@@ -22,15 +22,15 @@ const Gallery = () => {
 
   // Curated images for a compelling, varied gallery
   const images = [
-    { src: "https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg", span: "md:row-span-2" },
+    { src: "/images/event (1).jpg", span: "md:row-span-2" },
     { src: "https://images.pexels.com/photos/154147/pexels-photo-154147.jpeg", span: "md:col-span-2" },
-    { src: "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg", span: "" },
-    { src: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg", span: "" },
+    { src: "/images/event (1).jpeg", span: "" },
+    { src: "/images/event (2).webp", span: "" },
     { src: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg", span: "md:row-span-2" },
-    { src: "https://images.pexels.com/photos/1691901/pexels-photo-1691901.jpeg", span: "md:col-span-2" },
+    { src: "/images/event (1).webp", span: "md:col-span-2" },
     { src: "https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg", span: "" },
     { src: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg", span: "" },
-    { src: "https://images.pexels.com/photos/167446/pexels-photo-167446.jpeg", span: "" },
+    // { src: "https://images.pexels.com/photos/167446/pexels-photo-167446.jpeg", span: "" },
   ];
 
   const handleImageClick = (image) => {

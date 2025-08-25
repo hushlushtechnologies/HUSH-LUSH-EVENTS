@@ -237,6 +237,8 @@ export default function Wedding() {
             "Entertainment (Bands, DJs, Dancers)",
             "Catering & Menu Planning",
             "Guest Management & Hospitality",
+            "Bridal & Groom Styling",
+            "Transportation & Logistics",
           ].map((service, i) => (
             <motion.div
               key={i}
