@@ -1,5 +1,6 @@
 import FlavorTitle from "../components/FlavorTitle";
 import FlavorSlider from "../components/FlavorSlider";
+import FlavorSliderMobile from "../components/ServiceSlideForMobile";
 
 const FlavorSection = () => {
   return (
@@ -8,8 +9,11 @@ const FlavorSection = () => {
         <div className="lg:w-[57%] flex-none h-96 md:h-90 lg:h-full md:mt-20 xl:mt-0">
           <FlavorTitle />
         </div>
-        <div className="h-full">
+        <div className="hidden lg:flex h-full">
           <FlavorSlider />
+        </div>
+        <div className="flex lg:hidden h-full">
+          <FlavorSliderMobile />
         </div>
       </div>
     </section>

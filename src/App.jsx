@@ -33,12 +33,16 @@ const ContactPage = () => <div className="p-20 text-center text-2xl">Contact Pag
 
 
 const App = () => {
+
   useGSAP(() => {
     ScrollSmoother.create({
       smooth: 3,
       effects: true,
     });
   });
+
+ 
+
 
   return (
  

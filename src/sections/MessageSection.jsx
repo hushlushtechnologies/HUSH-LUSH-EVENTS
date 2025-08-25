@@ -84,7 +84,7 @@ const MessageSection = () => {
           </div>
         </div>
 
-        <h1 className="second-message  ">
+        <h1 className="second-message   ">
           with unforgettable moments  
         </h1>
       </div>

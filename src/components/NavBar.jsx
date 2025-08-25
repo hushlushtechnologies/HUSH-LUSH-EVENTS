@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showIcons, setShowIcons] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => setShowIcons((prev) => !prev), 4000);
@@ -34,8 +35,8 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black text-white backdrop-blur-md shadow-sm  ">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between  ">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black text-white backdrop-blur-md shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-2xl"
@@ -58,7 +59,7 @@ const NavBar = () => {
                   {link.label}
                 </NavLink>
                 {dropdownOpen && (
-                  <ul className="absolute top-6 left-0 bg-black text-white shadow-lg rounded-md w-48 py-2 z-50 ">
+                  <ul className="absolute top-6 left-0 bg-black text-white shadow-lg rounded-md w-48 py-2 z-50">
                     {link.dropdown.map((sublink) => (
                       <li key={sublink.label}>
                         <NavLink
@@ -88,7 +89,7 @@ const NavBar = () => {
             <img
               src="/logo/hushlush.png"
               alt="nav-logo"
-              className="md:w-28 w-20 "
+              className="md:w-28 w-20"
             />
           </NavLink>
         </div>
@@ -134,12 +135,8 @@ const NavBar = () => {
                 ))}
               </div>
             </div>
+
             {/* Phone */}
-            {/* <div className={`absolute right-0 transition-all duration-700 ${showIcons ? " opacity-0 rotate-90" : "opacity-100"}`}>
-              <a href="tel:+971542321282" className="px-4 py-1 rounded-full gold-bg text-black font-semibold shadow-md hover:shadow-yellow-400">
-                Call us: +971 542321282
-              </a>
-            </div> */}
             <div
               className={`absolute right-0 transition-all duration-700 ${
                 showIcons ? "opacity-0 rotate-90" : "opacity-100"
@@ -161,35 +158,83 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black text-white px-4 pb-4">
+        <div className="md:hidden bg-black text-white px-4 pb-6">
           <ul className="flex flex-col gap-4 text-lg font-extralight">
             {mainLinks.map((link) => (
               <li key={link.label}>
-                <NavLink
-                  to={link.to}
-                  onClick={() => setIsOpen(false)}
-                  className={linkClass}
-                >
-                  {link.label}
-                </NavLink>
-                {link.dropdown && (
-                  <ul className="pl-4 mt-2 flex flex-col gap-2 text-sm">
-                    {link.dropdown.map((sublink) => (
-                      <li key={sublink.label}>
-                        <NavLink
-                          to={sublink.to}
-                          onClick={() => setIsOpen(false)}
-                          className="hover:text-yellow-400"
-                        >
-                          {sublink.label}
-                        </NavLink>
-                      </li>
-                    ))}
-                  </ul>
+                {link.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() =>
+                        setMobileDropdownOpen(
+                          mobileDropdownOpen === link.label ? false : link.label
+                        )
+                      }
+                      className="flex justify-between items-center w-full hover:text-yellow-400"
+                    >
+                      {link.label}
+                      {mobileDropdownOpen === link.label ? (
+                        <FiChevronUp />
+                      ) : (
+                        <FiChevronDown />
+                      )}
+                    </button>
+                    {mobileDropdownOpen === link.label && (
+                      <ul className="pl-4 mt-2 flex flex-col gap-2 text-sm">
+                        {link.dropdown.map((sublink) => (
+                          <li key={sublink.label}>
+                            <NavLink
+                              to={sublink.to}
+                              onClick={() => setIsOpen(false)}
+                              className="hover:text-yellow-400"
+                            >
+                              {sublink.label}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink
+                    to={link.to}
+                    onClick={() => setIsOpen(false)}
+                    className={linkClass}
+                  >
+                    {link.label}
+                  </NavLink>
                 )}
               </li>
             ))}
           </ul>
+
+          {/* Social Media Icons on Mobile */}
+          <div className="mt-6 flex gap-4 justify-center">
+            {[
+              {
+                href: "https://facebook.com/people/Hush-Lush-Events/61577939084079/",
+                icon: <FaFacebookF />,
+              },
+              {
+                href: "https://instagram.com/hushlush_events",
+                icon: <FaInstagram />,
+              },
+              {
+                href: "https://youtube.com/@HUSHLUSHEVENTS",
+                icon: <FaYoutube />,
+              },
+            ].map((item, i) => (
+              <a
+                key={i}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full gold-bg text-black text-xl shadow-md hover:scale-110 transition-all duration-300"
+              >
+                {item.icon}
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </nav>
