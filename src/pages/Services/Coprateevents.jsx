@@ -205,7 +205,7 @@ export default function CorporateEvents() {
           <iframe
             width="100%"
             height="500"
-            src="https://www.youtube.com/embed/Scxs7L0vhZ4"
+            src="https://www.youtube.com/embed/RNMcAjAL8cQ?si=zON2yuKT77Cjc3Sz"
             title="Corporate Event Video"
             allowFullScreen
           ></iframe>

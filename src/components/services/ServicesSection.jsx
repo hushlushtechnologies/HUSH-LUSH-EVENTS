@@ -77,7 +77,7 @@ const services = [
     title: "Corporate Events",
     description:
       "Professional, innovative, and brand-focused events designed to impress, inspire, and deliver meaningful connections.",
-    image: "/images/gallery3.jpg",
+    image: "/images/cop.jpg",
     subcategories: {
       "Business & Networking": [
         "Conferences & Seminars",
@@ -106,7 +106,7 @@ const services = [
     title: "Additional Services",
     description:
       "Enhance your event with our optional add-ons that make every detail perfect.",
-    image: "/images/gallery4.jpg",
+    image: "/images/event (1).avif",
     subcategories: {
       Extras: [
         "Venue Selection & Booking",

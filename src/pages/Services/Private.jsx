@@ -261,7 +261,7 @@ export default function Private() {
           >
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/Scxs7L0vhZ4"
+              src="https://www.youtube.com/embed/RNMcAjAL8cQ?si=zON2yuKT77Cjc3Sz"
               title="Private Events Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -22,7 +22,7 @@ export default function Wedding() {
      {/* Hero */}
 <section
   className="relative w-full h-[80vh] bg-cover bg-center"
-  style={{ backgroundImage: "url('https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg')" }}
+  style={{ backgroundImage: "url('/images/weddingbg.jpeg')" }}
 >
   <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-6">
     <motion.h1
@@ -73,7 +73,7 @@ export default function Wedding() {
             </ul>
           </motion.div>
           <motion.img
-            src="https://static.vecteezy.com/system/resources/previews/036/408/908/large_2x/happy-wedding-couple-posing-over-beautiful-landscape-in-the-mountains-photo.jpg"
+            src="/images/gallery3.jpg"
             alt="Wedding planning"
             className="rounded-xl shadow-lg object-cover h-80 w-full"
             initial={{ opacity: 0, scale: 0.9 }}
