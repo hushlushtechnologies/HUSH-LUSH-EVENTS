@@ -71,7 +71,7 @@ const AboutPhilosophySection = () => {
       {/* Left Image */}
       <div ref={imageRef} className="h-[500px]">
         <img
-          src="/images/wedding.jpg" // change to your image
+          src="/images/phy.jpg" // change to your image
           alt="Hush Lush Philosophy"
           className="w-full h-full object-cover rounded-lg shadow-lg"
         />

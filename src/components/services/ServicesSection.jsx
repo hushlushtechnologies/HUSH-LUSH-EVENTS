@@ -46,7 +46,7 @@ const services = [
     title: "Private Events",
     description:
       "From intimate celebrations to grand parties, we create unforgettable experiences tailored to your style and occasion.",
-    image: "/images/gallery2.jpg",
+    image: "/images/pe.jpg",
     subcategories: {
       Celebrations: [
         "Birthday Parties (Kids, Adults, Milestone)",

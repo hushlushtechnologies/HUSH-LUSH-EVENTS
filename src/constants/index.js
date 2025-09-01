@@ -21,7 +21,7 @@ const flavorlists = [
     name: "Photographies",
     color: "orange",
     rotation: "md:rotate-[8deg] rotate-0",
-    image : "/images/4.png",
+    image : "/images/pht.png",
   },
   // {
   //   name: "Vanilla Milkshake",
