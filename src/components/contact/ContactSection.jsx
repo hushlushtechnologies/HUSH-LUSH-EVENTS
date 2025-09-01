@@ -98,7 +98,7 @@ export default function ContactPage() {
         <div className="rounded-xl overflow-hidden shadow-lg">
           <iframe
             title="Hush Lush Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.806660140149!2d55.3864222!3d25.344268000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b4ad1f84c95%3A0x905e1932b1c879a2!2sAfaq%20Alkhaleej%20Management%20Consultants!5e0!3m2!1sen!2sin!4v1755601131471!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.806662527687!2d55.38155128015326!3d25.344267919902492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b129a3b9c23%3A0x611d3e8b1335256b!2sHushlush%20Events!5e0!3m2!1sen!2sin!4v1756726053846!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ minHeight: "400px", border: 0 }}
