@@ -1,28 +1,31 @@
-import { useState } from "react";
+ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 export default function ContactPage() {
   const { register, handleSubmit, reset } = useForm();
-  const [status, setStatus] = useState({ sending: false, ok: null, msg: "" });
+  const [status, setStatus] = useState({ sending: false });
 
   async function onSubmit(data) {
-    setStatus({ sending: true, ok: null, msg: "" });
+    setStatus({ sending: true });
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID",   // replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID",  // replace with your EmailJS template ID
+        "service_41as7fk",   // your EmailJS service ID
+        "template_tagivmb",  // your EmailJS template ID
         data,
-        "YOUR_PUBLIC_KEY"    // replace with your EmailJS public key
+        "_DVTHeE3c0_9ZfOcp"  // your EmailJS public key
       );
 
-      setStatus({ sending: false, ok: true, msg: "Thanks! We’ll get back to you shortly." });
-      reset(); // clears form
+      toast.success("✅ Thanks! We’ll get back to you shortly.");
+      reset();
     } catch (error) {
       console.error(error);
-      setStatus({ sending: false, ok: false, msg: "Something went wrong. Please try again." });
+      toast.error("❌ Something went wrong. Please try again.");
+    } finally {
+      setStatus({ sending: false });
     }
   }
 
@@ -88,10 +91,6 @@ export default function ContactPage() {
             <FaPaperPlane />
             {status.sending ? "Sending..." : "Send Message"}
           </button>
-
-          {status.msg && (
-            <p className={`text-sm ${status.ok ? "text-green-400" : "text-red-400"}`}>{status.msg}</p>
-          )}
         </form>
 
         {/* Map */}

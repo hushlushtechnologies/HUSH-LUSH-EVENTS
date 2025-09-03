@@ -22,6 +22,7 @@ import Wedding from "./pages/Services/Wedding";
 import Coprateevents from "./pages/Services/Coprateevents";
 import Private from "./pages/Services/Private";
 import ScrollToTopButton from "./components/ScrollToTopBtn";
+import { Toaster } from "react-hot-toast";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -50,6 +51,7 @@ const App = () => {
      <main>
       <ScrollToTop/>
       <CustomCursor />
+       <Toaster position="top-right" reverseOrder={false} />
       <NavBar />
        <ScrollToTopButton />
 
