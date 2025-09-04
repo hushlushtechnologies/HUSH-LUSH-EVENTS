@@ -1,4 +1,4 @@
- import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import FooterSection from "../sections/FooterSection";
@@ -25,8 +25,13 @@ const Orb = ({ top, left, delay }) => (
 
 export default function Events() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [isMuted, setIsMuted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [isMuted, setIsMuted] = useState(true); // 🔇 Start muted
   const audioRef = useRef(null);
 
   const getNextSunday = () => {
@@ -58,19 +63,32 @@ export default function Events() {
     return () => clearInterval(interval);
   }, []);
 
-  // Play audio on page load
+  // Enable audio on first user interaction (click/tap)
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.play().catch((err) => {
-        console.log("Autoplay prevented:", err);
-      });
-    }
+    const enableAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.muted = true; // 🔇 Ensure muted at first
+        audioRef.current.play().catch((err) => {
+          console.log("Playback blocked:", err);
+        });
+      }
+      document.removeEventListener("click", enableAudio);
+      document.removeEventListener("touchstart", enableAudio);
+    };
+
+    document.addEventListener("click", enableAudio);
+    document.addEventListener("touchstart", enableAudio);
+
+    return () => {
+      document.removeEventListener("click", enableAudio);
+      document.removeEventListener("touchstart", enableAudio);
+    };
   }, []);
 
   const toggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
+      audioRef.current.muted = !audioRef.current.muted;
+      setIsMuted(audioRef.current.muted);
     }
   };
 
@@ -105,7 +123,11 @@ export default function Events() {
         onClick={toggleMute}
         className="fixed top-5 right-5 z-50 bg-white/20 backdrop-blur-md p-3 rounded-full shadow-lg text-white hover:bg-white/40 transition animate-pulse"
       >
-        {isMuted ? <FaVolumeMute className="text-2xl" /> : <FaVolumeUp className="text-2xl" />}
+        {isMuted ? (
+          <FaVolumeMute className="text-2xl" />
+        ) : (
+          <FaVolumeUp className="text-2xl" />
+        )}
       </button>
 
       {/* Animated Orbs */}
@@ -137,7 +159,7 @@ export default function Events() {
         href="https://wa.me/971526382266?text=Hi, I am interested. May I know more details?"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-4 mt-14 rounded-full shadow-xl hover:bg-green-600 transition text-lg font-semibold relative z-10 "
+        className="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-4 mt-14 rounded-full shadow-xl hover:bg-green-600 transition text-lg font-semibold relative z-10"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
