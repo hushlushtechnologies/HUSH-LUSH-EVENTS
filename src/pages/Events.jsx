@@ -197,7 +197,7 @@ export default function Events() {
           </motion.div>
         )}
       </AnimatePresence>
-      <FooterSection/>
+      {/* <FooterSection/> */}
     </section>
   );
 }
