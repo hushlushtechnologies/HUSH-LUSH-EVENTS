@@ -86,18 +86,15 @@ export default function Events() {
 // }, []);
 
 
-useEffect(() => {
+ useEffect(() => {
   const playAudio = () => {
     if (audioRef.current) {
-      audioRef.current.muted = false; // make sure it can play sound
-      audioRef.current
-        .play()
-        .then(() => console.log("Audio playing"))
+      audioRef.current.muted = false; // 🔊 forces audio to unmute
+      audioRef.current.play().then(() => console.log("Audio playing"))
         .catch(err => console.log("Playback blocked", err));
     }
   };
 
-  // Multiple user interaction events
   const events = ["click", "touchstart", "keydown", "pointerdown"];
   events.forEach(e => document.addEventListener(e, playAudio, { once: true }));
 
