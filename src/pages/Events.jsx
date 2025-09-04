@@ -65,25 +65,46 @@ export default function Events() {
 
   // Enable audio on first user interaction (click/tap)
  // Inside Events component
+// useEffect(() => {
+//   const enableAudio = () => {
+//     if (audioRef.current) {
+//       audioRef.current.play().catch((err) => {
+//         console.log("Playback blocked:", err);
+//       });
+//     }
+//     document.removeEventListener("click", enableAudio);
+//     document.removeEventListener("touchstart", enableAudio);
+//   };
+
+//   document.addEventListener("click", enableAudio);
+//   document.addEventListener("touchstart", enableAudio);
+
+//   return () => {
+//     document.removeEventListener("click", enableAudio);
+//     document.removeEventListener("touchstart", enableAudio);
+//   };
+// }, []);
+
+
 useEffect(() => {
-  const enableAudio = () => {
+  const playAudio = () => {
     if (audioRef.current) {
-      audioRef.current.play().catch((err) => {
-        console.log("Playback blocked:", err);
-      });
+      audioRef.current.muted = false; // make sure it can play sound
+      audioRef.current
+        .play()
+        .then(() => console.log("Audio playing"))
+        .catch(err => console.log("Playback blocked", err));
     }
-    document.removeEventListener("click", enableAudio);
-    document.removeEventListener("touchstart", enableAudio);
   };
 
-  document.addEventListener("click", enableAudio);
-  document.addEventListener("touchstart", enableAudio);
+  // Multiple user interaction events
+  const events = ["click", "touchstart", "keydown", "pointerdown"];
+  events.forEach(e => document.addEventListener(e, playAudio, { once: true }));
 
-  return () => {
-    document.removeEventListener("click", enableAudio);
-    document.removeEventListener("touchstart", enableAudio);
-  };
+  return () => events.forEach(e => document.removeEventListener(e, playAudio));
 }, []);
+
+
 
   const toggleMute = () => {
     if (audioRef.current) {
