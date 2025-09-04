@@ -86,29 +86,41 @@ export default function Events() {
 // }, []);
 
 
- useEffect(() => {
-  const playAudio = () => {
+//  useEffect(() => {
+//   const playAudio = () => {
+//     if (audioRef.current) {
+//       audioRef.current.muted = false; // 🔊 forces audio to unmute
+//       audioRef.current.play().then(() => console.log("Audio playing"))
+//         .catch(err => console.log("Playback blocked", err));
+//     }
+//   };
+
+//   const events = ["click", "touchstart", "keydown", "pointerdown"];
+//   events.forEach(e => document.addEventListener(e, playAudio, { once: true }));
+
+//   return () => events.forEach(e => document.removeEventListener(e, playAudio));
+// }, []);
+
+
+
+ 
+
+ const toggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = false; // 🔊 forces audio to unmute
-      audioRef.current.play().then(() => console.log("Audio playing"))
-        .catch(err => console.log("Playback blocked", err));
+      if (isMuted) {
+        // If currently muted, unmute and play
+        audioRef.current.muted = false;
+        audioRef.current.play().catch(err => console.log("Playback blocked:", err));
+      } else {
+        // If currently unmuted, mute and pause
+        audioRef.current.muted = true;
+        audioRef.current.pause();
+      }
+      setIsMuted(!isMuted);
     }
   };
 
-  const events = ["click", "touchstart", "keydown", "pointerdown"];
-  events.forEach(e => document.addEventListener(e, playAudio, { once: true }));
 
-  return () => events.forEach(e => document.removeEventListener(e, playAudio));
-}, []);
-
-
-
-  const toggleMute = () => {
-    if (audioRef.current) {
-      audioRef.current.muted = !audioRef.current.muted;
-      setIsMuted(audioRef.current.muted);
-    }
-  };
 
   const orbs = [
     { top: "10%", left: "15%", delay: 0 },
@@ -134,7 +146,14 @@ export default function Events() {
   return (
     <section className="relative bg-gradient-to-b mt-13 py-20 px-6 text-center overflow-hidden">
       {/* Audio Element */}
-  <audio ref={audioRef} src="/event/onam.mp3" loop playsInline />
+<audio
+        ref={audioRef}
+        src="/event/onam.mp3"
+        loop
+        muted={isMuted} // start muted
+        playsInline
+      />
+
 
 
       {/* Mute Button */}
