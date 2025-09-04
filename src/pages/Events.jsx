@@ -64,26 +64,26 @@ export default function Events() {
   }, []);
 
   // Enable audio on first user interaction (click/tap)
-  useEffect(() => {
-    const enableAudio = () => {
-      if (audioRef.current) {
-        audioRef.current.muted = true; // 🔇 Ensure muted at first
-        audioRef.current.play().catch((err) => {
-          console.log("Playback blocked:", err);
-        });
-      }
-      document.removeEventListener("click", enableAudio);
-      document.removeEventListener("touchstart", enableAudio);
-    };
+ // Inside Events component
+useEffect(() => {
+  const enableAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play().catch((err) => {
+        console.log("Playback blocked:", err);
+      });
+    }
+    document.removeEventListener("click", enableAudio);
+    document.removeEventListener("touchstart", enableAudio);
+  };
 
-    document.addEventListener("click", enableAudio);
-    document.addEventListener("touchstart", enableAudio);
+  document.addEventListener("click", enableAudio);
+  document.addEventListener("touchstart", enableAudio);
 
-    return () => {
-      document.removeEventListener("click", enableAudio);
-      document.removeEventListener("touchstart", enableAudio);
-    };
-  }, []);
+  return () => {
+    document.removeEventListener("click", enableAudio);
+    document.removeEventListener("touchstart", enableAudio);
+  };
+}, []);
 
   const toggleMute = () => {
     if (audioRef.current) {
@@ -116,7 +116,8 @@ export default function Events() {
   return (
     <section className="relative bg-gradient-to-b mt-13 py-20 px-6 text-center overflow-hidden">
       {/* Audio Element */}
-      <audio ref={audioRef} src="/event/onam.mp3" loop />
+  <audio ref={audioRef} src="/event/onam.mp3" loop playsInline />
+
 
       {/* Mute Button */}
       <button
