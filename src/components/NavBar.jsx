@@ -30,7 +30,7 @@ const NavBar = () => {
     { to: "/about", label: "About Us" },
     { to: "/services", label: "Services", dropdown: services },
     { to: "/gallery", label: "Gallery" },
-    { to: "/events", label: "Events" },
+    // { to: "/events", label: "Events" },
     { to: "/contact", label: "Contact" },
   ];
 
