@@ -3,6 +3,7 @@ import PageGround from "../../components/PageGround";
 import FooterSection from "../../sections/FooterSection";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import useSEO from "../../hooks/useSeo";
 
  
 const fadeUp = {
@@ -13,6 +14,12 @@ const fadeUp = {
 export default function Wedding() {
 
   const MotionLink = motion(Link);
+
+     useSEO({
+        title: "Event Planning Company In Sharjah",
+        description:
+          "From weddings to corporate events, HushLush Events provides professional event planning and management services across the UAE.",
+      });
 
   return (
     <>

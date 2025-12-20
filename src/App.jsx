@@ -27,63 +27,85 @@ import SnowfallEffect from "./components/christmas/SnowfallEffect";
 import ChristmasLights from "./components/christmas/ChristmasLights";
 import ChristmasGreetingModal from "./components/christmas/ChristmasGreetingModal";
 import SantaWaving from "./components/christmas/SantaWaving";
+import { Helmet } from "react-helmet-async";
+import Home from "./pages/Home";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // Dummy pages for navigation
-const AboutPage = () => <div className="p-20 text-center text-2xl">About Us Page</div>;
-const ServicesPage = () => <div className="p-20 text-center text-2xl">Services Page</div>;
-const PortfolioPage = () => <div className="p-20 text-center text-2xl">Portfolio Page</div>;
-const ContactPage = () => <div className="p-20 text-center text-2xl">Contact Page</div>;
-
+const AboutPage = () => (
+  <div className="p-20 text-center text-2xl">About Us Page</div>
+);
+const ServicesPage = () => (
+  <div className="p-20 text-center text-2xl">Services Page</div>
+);
+const PortfolioPage = () => (
+  <div className="p-20 text-center text-2xl">Portfolio Page</div>
+);
+const ContactPage = () => (
+  <div className="p-20 text-center text-2xl">Contact Page</div>
+);
 
 const App = () => {
+  // useGSAP(() => {
+  //   ScrollSmoother.create({
+  //     smooth: 3,
+  //     effects: true,
+  //   });
+  // });
 
   useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 3,
-      effects: true,
-    });
-  });
-
- 
-
+    if (!ScrollSmoother.get()) {
+      ScrollSmoother.create({
+        smooth: 3,
+        effects: true,
+      });
+    }
+  }, []);
 
   return (
- 
-
-     <main>
-      <ScrollToTop/>
+    <main>
+      <ScrollToTop />
       <CustomCursor />
-       <Toaster position="top-right" reverseOrder={false} />
+      <Toaster position="top-right" reverseOrder={false} />
       <NavBar />
-       <ScrollToTopButton />
-<SnowfallEffect />
- <SantaWaving />
- 
+      <ScrollToTopButton />
+      <SnowfallEffect />
+      <SantaWaving />
+
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <Routes>
             {/* Home Page */}
-            <Route
+            {/* <Route
               path="/"
               element={
-                <>
+                <Helmet>
+                  <title>
+                    Best Event Planner UAE | Wedding & Corporate Event
+                    Management
+                  </title>
+                  <meta
+                    name="description"
+                    content="Looking for an expert event planner in the UAE? HushLush Events delivers premium wedding and corporate event management with seamless coordination."
+                  />
                   <HeroSection />
                   <MessageSection />
                   <FlavorSection />
                   <BenefitSection />
                   <div className="hidden lg:block">
-                  <TestimonialSection />
+                    <TestimonialSection />
                   </div>
-                 <FooterSection />
-                </>
+                  <FooterSection />
+                </Helmet>
               }
-            />
+            /> */}
+
+            <Route path="/" element={<Home />} />
 
             {/* Other Pages */}
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services/>} />
+            <Route path="/services" element={<Services />} />
             <Route path="/services/wedding" element={<Wedding />} />
             <Route path="/services/corporate" element={<Coprateevents />} />
             <Route path="/services/private-parties" element={<Private />} />
@@ -94,7 +116,6 @@ const App = () => {
           </Routes>
         </div>
       </div>
-       
     </main>
   );
 };

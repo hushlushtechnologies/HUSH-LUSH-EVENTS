@@ -2,6 +2,7 @@
 import PageGround from '../../components/PageGround';
 import FooterSection from "../../sections/FooterSection";
 import { motion } from 'framer-motion';
+import useSEO from '../../hooks/useSeo';
 
 // Animations
 const fadeIn = {
@@ -67,6 +68,13 @@ const MotionCard = ({ section, idx }) => (
 );
 
 export default function Private() {
+
+     useSEO({
+      title: "Event Planner UAE",
+      description:
+        "From weddings to corporate events, HushLush Events provides professional event planning and management services across the UAE.",
+    });
+
   const sections = [
     {
       title: "Celebrations",

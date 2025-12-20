@@ -1,7 +1,9 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageGround from "../components/PageGround";
 import FooterSection from "../sections/FooterSection";
+import { Helmet } from "react-helmet-async";
+import useSEO from "../hooks/useSeo";
 
 // Animation for a staggered fade-in and scale effect
 const fadeAndScale = {
@@ -23,13 +25,25 @@ const Gallery = () => {
   // Curated images for a compelling, varied gallery
   const images = [
     { src: "/images/event (1).jpg", span: "md:row-span-2" },
-    { src: "https://images.pexels.com/photos/154147/pexels-photo-154147.jpeg", span: "md:col-span-2" },
+    {
+      src: "https://images.pexels.com/photos/154147/pexels-photo-154147.jpeg",
+      span: "md:col-span-2",
+    },
     { src: "/images/event (1).jpeg", span: "" },
     { src: "/images/event (2).webp", span: "" },
-    { src: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg", span: "md:row-span-2" },
+    {
+      src: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg",
+      span: "md:row-span-2",
+    },
     { src: "/images/event (1).webp", span: "md:col-span-2" },
-    { src: "https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg", span: "" },
-    { src: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg", span: "" },
+    {
+      src: "https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg",
+      span: "",
+    },
+    {
+      src: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg",
+      span: "",
+    },
     // { src: "https://images.pexels.com/photos/167446/pexels-photo-167446.jpeg", span: "" },
   ];
 
@@ -41,8 +55,15 @@ const Gallery = () => {
     setSelectedImage(null);
   };
 
+    useSEO({
+    title: "Best Wedding Planners In Dubai",
+    description:
+      "Your trusted event planner in the UAE for weddings and corporate events. HushLush Events ensures stylish design and stress-free execution."
+  });
+
   return (
     <>
+ 
       <PageGround name="Gallery" />
       <section className="bg-[#111] py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto text-center">
@@ -60,7 +81,9 @@ const Gallery = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg"
           >
-            A storytelling journey through our events—from vibrant celebrations to intimate gatherings, each frame captures a unique and magical story.
+            A storytelling journey through our events—from vibrant celebrations
+            to intimate gatherings, each frame captures a unique and magical
+            story.
           </motion.p>
           <div className="relative mb-12">
             <motion.div
@@ -119,7 +142,9 @@ const Gallery = () => {
                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                       />
                     </motion.svg>
-                    <span className="text-white text-lg font-medium">View Image</span>
+                    <span className="text-white text-lg font-medium">
+                      View Image
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -163,38 +188,39 @@ const Gallery = () => {
       </AnimatePresence>
 
       {/* Final CTA */}
-<section className="bg-black text-white py-20 px-6 md:px-12 text-center">
-  <motion.h2
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="text-3xl md:text-5xl font-bold mb-4"
-  >
-    Ready to Create Your Own Unforgettable Event?
-  </motion.h2>
-  <motion.p
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.2, duration: 0.6 }}
-    viewport={{ once: true }}
-    className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto"
-  >
-    Let's turn your vision into a stunning reality. Contact us to start planning your perfect event.
-  </motion.p>
-  <motion.a
-    href="/contact"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.4, duration: 0.6 }}
-    viewport={{ once: true }}
-    className="px-10 py-4 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105"
-  >
-    Plan My Event
-  </motion.a>
-</section>
-<FooterSection/>
-    </>
+      <section className="bg-black text-white py-20 px-6 md:px-12 text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-5xl font-bold mb-4"
+        >
+          Ready to Create Your Own Unforgettable Event?
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto"
+        >
+          Let's turn your vision into a stunning reality. Contact us to start
+          planning your perfect event.
+        </motion.p>
+        <motion.a
+          href="/contact"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="px-10 py-4 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105"
+        >
+          Plan My Event
+        </motion.a>
+      </section>
+      <FooterSection />
+   </>
   );
 };
 

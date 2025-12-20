@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import PageGround from "../../components/PageGround";
 import FooterSection from "../../sections/FooterSection";
+import useSEO from "../../hooks/useSeo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -13,6 +14,12 @@ const fadeUp = {
 };
 
 export default function CorporateEvents() {
+
+    useSEO({
+    title: "Event Management Companies UAE",
+    description:
+      "From weddings to corporate events, HushLush Events provides professional event planning and management services across the UAE.",
+  });
   return (
     <>
       <PageGround name="Corporate Events" />
