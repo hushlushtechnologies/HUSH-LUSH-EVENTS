@@ -96,11 +96,11 @@ const NavBar = () => {
 
         {/* Right Links (Desktop) */}
         <ul className="hidden md:flex gap-6 font-medium items-center">
-          <li>
+          {/* <li>
             <NavLink to="/contact" className={linkClass}>
               Contact
             </NavLink>
-          </li>
+          </li> */}
           <div className="hidden md:flex items-center gap-6 font-medium relative w-48 justify-end">
             {/* Social icons */}
             <div
