@@ -146,7 +146,7 @@ const NavBar = () => {
                 href="tel:+971542321282"
                 className="px-4 py-1 rounded-full gold-bg text-black font-semibold shadow-md hover:shadow-yellow-400 whitespace-nowrap"
               >
-                Call us: +971 542321282
+                Call us: +971 542321281
               </a>
             </div>
           </div>
