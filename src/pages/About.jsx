@@ -4,7 +4,7 @@ import IntroductionSection from "../components/about/Introduction";
 import PhilosophySection from "../components/about/Philosophy";
 import FooterSection from "../sections/FooterSection";
 import AboutUsGallery from "../components/about/AboutGallery";
-import { Helmet } from "react-helmet-async";
+
 import useSEO from "../hooks/useSeo";
 
 export default function About() {

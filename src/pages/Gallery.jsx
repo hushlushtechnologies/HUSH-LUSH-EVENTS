@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageGround from "../components/PageGround";
 import FooterSection from "../sections/FooterSection";
-import { Helmet } from "react-helmet-async";
+
 import useSEO from "../hooks/useSeo";
 
 // Animation for a staggered fade-in and scale effect

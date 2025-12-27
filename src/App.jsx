@@ -27,7 +27,6 @@ import SnowfallEffect from "./components/christmas/SnowfallEffect";
 import ChristmasLights from "./components/christmas/ChristmasLights";
 import ChristmasGreetingModal from "./components/christmas/ChristmasGreetingModal";
 import SantaWaving from "./components/christmas/SantaWaving";
-import { Helmet } from "react-helmet-async";
 import Home from "./pages/Home";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
