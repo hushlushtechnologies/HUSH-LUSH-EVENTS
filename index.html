@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Basic Meta Tags -->
@@ -8,13 +8,15 @@
 
     <!-- Title -->
     <title>HushLush Events | Premium Event Management & Experiences</title>
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
     <!-- SEO Meta Tags -->
     <meta
@@ -27,11 +29,8 @@
     />
     <meta name="author" content="HushLush Events" />
 
-    <!-- Open Graph (Facebook & LinkedIn) -->
-    <meta
-      property="og:title"
-      content="HushLush Events | Premium Event Management"
-    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="HushLush Events | Premium Event Management" />
     <meta
       property="og:description"
       content="Experience luxury event planning with HushLush Events. Weddings, corporate events, and unforgettable celebrations."
@@ -42,17 +41,14 @@
 
     <!-- Twitter Meta -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="HushLush Events | Premium Event Management"
-    />
+    <meta name="twitter:title" content="HushLush Events | Premium Event Management" />
     <meta
       name="twitter:description"
       content="Luxury event management services including weddings, corporate events, and private parties."
     />
     <meta name="twitter:image" content="/preview.jpg" />
 
-    <!-- Meta Pixel Code -->
+    <!-- Facebook Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -63,11 +59,11 @@
         };
         if (!f._fbq) f._fbq = n;
         n.push = n;
-        n.loaded = !0;
+        n.loaded = true;
         n.version = "2.0";
         n.queue = [];
         t = b.createElement(e);
-        t.async = !0;
+        t.async = true;
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s);
@@ -80,33 +76,20 @@
       fbq("init", "1352408135743467");
       fbq("track", "PageView");
     </script>
-    <template id="fb-pixel-noscript">
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style="display: none"
-          src="https://www.facebook.com/tr?id=1352408135743467&ev=PageView&noscript=1"
-        />
-      </noscript>
-      <!-- End Meta Pixel Code -->
-    </template>
+    <!-- End Meta Pixel Code -->
 
-    <!-- Google tag (gtag.js) -->   
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-17788515243"
-    ></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17788515243"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
-
-      gtag("config", "AW-17788515243");
+      gtag("config", "AW-17788515243", {
+        send_page_view: true
+      });
     </script>
 
+    <!-- Google Site Verification -->
     <meta
       name="google-site-verification"
       content="Te31pG90lnI7xjJLb04HktM8gAhlHC8zrlpg5oPvf5I"
@@ -114,6 +97,16 @@
   </head>
 
   <body>
+    <!-- Facebook Pixel Noscript -->
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=1352408135743467&ev=PageView&noscript=1"
+      />
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
