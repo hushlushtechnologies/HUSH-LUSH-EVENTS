@@ -69,8 +69,8 @@ const App = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <NavBar />
       <ScrollToTopButton />
-      <SnowfallEffect />
-      <SantaWaving />
+      {/* <SnowfallEffect />
+      <SantaWaving /> */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
