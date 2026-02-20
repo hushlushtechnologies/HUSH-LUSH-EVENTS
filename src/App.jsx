@@ -23,7 +23,7 @@ import Coprateevents from "./pages/Services/Coprateevents";
 import Private from "./pages/Services/Private";
 import ScrollToTopButton from "./components/ScrollToTopBtn";
 import { Toaster } from "react-hot-toast";
-import SnowfallEffect from "./components/christmas/SnowfallEffect";
+import RamadanGlow from "./components/christmas/SnowfallEffect";
 import ChristmasLights from "./components/christmas/ChristmasLights";
 import ChristmasGreetingModal from "./components/christmas/ChristmasGreetingModal";
 import SantaWaving from "./components/christmas/SantaWaving";
@@ -69,8 +69,8 @@ const App = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <NavBar />
       <ScrollToTopButton />
-      {/* <SnowfallEffect />
-      <SantaWaving /> */}
+      <RamadanGlow />
+      <SantaWaving />
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
