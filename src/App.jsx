@@ -69,8 +69,8 @@ const App = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <NavBar />
       <ScrollToTopButton />
-      <RamadanGlow />
-      <SantaWaving />
+      {/* <RamadanGlow />
+      <SantaWaving /> */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
