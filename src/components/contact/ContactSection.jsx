@@ -42,7 +42,7 @@ export default function ContactPage() {
       <section className="max-w-6xl mx-auto px-6 grid sm:grid-cols-3 gap-8 mb-16">
         <InfoCard icon={<FaEnvelope />} title="Email Us" text="info@hushlushevents.com" />
         <InfoCard icon={<FaPhoneAlt />} title="Call Us" text="+971 542321281" />
-        <InfoCard icon={<FaMapMarkerAlt />} title="Visit Us" text="crystal plaza Sharjah al majaz 1 Dubai, UAE" />
+        <InfoCard icon={<FaMapMarkerAlt />} title="Visit Us" text="Office no 501, Al Zarooni Building, Near Insurance Market Metro Station, Sheikh Zayed Road, Al Barsha" />
       </section>
 
       {/* Form + Map */}
@@ -96,14 +96,14 @@ export default function ContactPage() {
         {/* Map */}
         <div className="rounded-xl overflow-hidden shadow-lg">
           <iframe
-            title="Hush Lush Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.806662527687!2d55.38155128015326!3d25.344267919902492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b129a3b9c23%3A0x611d3e8b1335256b!2sHushlush%20Events!5e0!3m2!1sen!2sin!4v1756726053846!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ minHeight: "400px", border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+  title="Hush Lush Location"
+  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d537.0433594113546!2d55.1840602045014!3d25.1092165872698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sae!4v1783409710884!5m2!1sen!2sae"
+  width="100%"
+  height="100%"
+  style={{ minHeight: "400px", border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+></iframe>
         </div>
       </section>
     </main>
